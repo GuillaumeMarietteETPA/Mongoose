@@ -31,7 +31,7 @@ function init() {
 function preload(){
 	this.load.image('background','assets/sky.png');
 	this.load.image('sol','assets/plat2.png');
-	this.load.spritesheet('perso','assets/stevenrun2.png',{frameWidth: 27, frameHeight: 37});
+	this.load.spritesheet('perso','assets/stevenrun2.png',{frameWidth: 52, frameHeight: 70});
 }
 
 function create(){

@@ -62,9 +62,6 @@ function create(){
 		repeat: -1
 	});
 	
-
-	
-	
 	this.anims.create({
 		key:'stop',
 		frames: this.anims.generateFrameNumbers('perso', {start: 6, end: 6}),
@@ -129,7 +126,7 @@ function update() {
 	}
 	
 	else {
-		player.anims.play('stop',true);
+		player.anims.play('stop');
 		player.setVelocityX(0);
 	}
 
@@ -157,6 +154,19 @@ function update() {
 
 function collectStar (player, star) {
     star.disableBody(true, true);
+	
+	score += 10;
+	scoreText.setText('Score: ' + score);
+	 
+	 if (stars.countActive(true) === 0)  {
 
+       stars.children.iterate(function (child) {
+
+            child.enableBody(true, child.x, 0, true, true);
+
+        });
+	}
+
+	
 	
 }
